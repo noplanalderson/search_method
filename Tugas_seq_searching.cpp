@@ -4,7 +4,7 @@
 using namespace std;
 
 /*---------------------------------------------------------------------------
- | PROGRAM SEQUENTIAL V2 DENGAN ARRAY BERISI STRING MENGGUNAKAN C++
+ | PROGRAM SEQUENTIAL SEARCHING DENGAN TIPE DATA STRING MENGGUNAKAN C++
  |---------------------------------------------------------------------------
  |
  | Author	: Muhammad Ridwan Na'im
@@ -13,54 +13,49 @@ using namespace std;
  |
 */
 
-void SequentialSearching(string DataNama[], int n, string nama, bool *ketemu, int *index);
+void SequentialSearching(string DataNama[], int n, string nama, bool *ketemu);
 
 int main()
 {
 	cout<<"#############################################################################\n";
 	cout<<"#                                                                           #\n";
-	cout<<"#      PROGRAM SEQUENTIAL V2 DENGAN ARRAY BERISI STRING MENGGUNAKAN C++     #\n";
-	cout<<"#                                                                           #\n";
-	cout<<"#############################################################################\n";
+	cout<<"#  PROGRAM SEQUENTIAL SEARCHING DENGAN ARRAY BERISI STRING MENGGUNAKAN C++  #\n";
 	cout<<"#                                                                           #\n";
 	cout<<"#  Author: Muhammad Ridwan Na'im                                            #\n";
 	cout<<"#  Kelas : 02TPLE001                                                        #\n";
 	cout<<"#  NIM   : 211011450453                                                     #\n";
 	cout<<"#                                                                           #\n";
-	cout<<"#############################################################################\n\n";
+	cout<<"#############################################################################\n";
 
 	string DataNama[] = {"Ronaldo", "Mark Klock", "Egy", "Kambuaya", "Witan", "Nadeo"};
 	string nama;
 
-	int n, jumlahData = 6, index;
+	int n, jumlahData = 6;
 	bool ketemu;
 
 	for (int i = 0; i < jumlahData; i++)
 	{
 		cout<<"Cari nama: ";cin>>nama;
-		SequentialSearching(DataNama, jumlahData, nama, &ketemu, &index);
+		SequentialSearching(DataNama, jumlahData, nama, &ketemu);
 		if(ketemu == true)
 		{
-			cout<<"Nama "<<nama<<" ditemukan pada index ke-"<<index<<endl;
+			cout<<"Nama "<<nama<<" ditemukan!"<<endl;
 		}
 		else
 		{
-			cout<<"Nama "<<nama<<" tidak ada dalam array"<<endl;
+			cout<<"Nama yang "<<nama<<" tidak ada dalam array"<<endl;
 		}
 	}
 }
 
-void SequentialSearching(string DataNama[], int n, string nama, bool *ketemu, int *index)
+void SequentialSearching(string DataNama[], int n, string nama, bool *ketemu)
 {
 	int i=0;
 	*ketemu=false;
 
 	while(i<n && !(*ketemu))
 	{
-		if(DataNama[i] == nama) {
-			*index = i;
-			*ketemu=true;
-		}
+		if(DataNama[i] == nama) *ketemu=true;
 		else i++;
 	}
 }

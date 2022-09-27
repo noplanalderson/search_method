@@ -14,8 +14,7 @@ const int SIZE = 22;
 
 /**
  * Program pencarian array berisi string dengan metode binary search pada C++
- * Array diurutkan secara ascending terlebih dahulu.
- *
+ * 
  * @return void
 */
 int main()
@@ -30,7 +29,7 @@ int main()
     cout<<"#  Kelas : 02TPLE001                                                        #\n";
     cout<<"#  NIM   : 211011450453                                                     #\n";
     cout<<"#                                                                           #\n";
-    cout<<"#############################################################################\n\n";
+    cout<<"#############################################################################\n";
 
     // Definisikan Array
     const int NUM_NAMA = 22;
